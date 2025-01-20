@@ -145,8 +145,8 @@ export const webProject = [
       },
     ],
     image: DPortfolio,
-    source_link: "https://shinchancode.github.io/3d-react-portfolio/",
-    source_code_link: "https://github.com/shinchancode/3d-react-portfolio",
+    source_link: "https://ismaeeldev.netlify.app",
+    source_code_link: "https://github.com/ismaeeldev/3D-Portflio",
   },
   {
     name: "Genix Gym Management",
