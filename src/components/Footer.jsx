@@ -14,7 +14,7 @@ const Footer = () => {
         </a>
         😎
       </p>
-      <p className="pink-text-gradient">No. of Visitors | <img className="visitcounter" src="https://hitwebcounter.com/counter/counter.php?page=9795911&style=0025&nbdigits=5&type=page&initCount=459" title="Counter Widget" Alt="Visit counter For Websites" border="0" /></p>
+      <p className="pink-text-gradient">No. of Visitors &nsbp;|| &nsbp; <img src="https://hitwebcounter.com/counter/counter.php?page=18554175&style=0009&nbdigits=5&type=page&initCount=10" title="Counter Widget" Alt="Visit counter For Websites" border="0" /></p>
 
     </div>
   );
