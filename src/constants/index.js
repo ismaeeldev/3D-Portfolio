@@ -146,7 +146,7 @@ export const webProject = [
     ],
     image: DPortfolio,
     source_link: "https://ismaeeldev.netlify.app",
-    source_code_link: "https://github.com/ismaeeldev/3D-Portflio",
+    source_code_link: "https://github.com/ismaeeldev/3D-Portfolio",
   },
   {
     name: "Genix Gym Management",
