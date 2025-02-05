@@ -61,15 +61,15 @@ const achievements = [
 const technologies = [
   {
     name: "HTML 5",
-    icon: html,
+    icon: "https://img.icons8.com/color/480/000000/html.png",
   },
   {
     name: "CSS 3",
-    icon: css,
+    icon: "https://img.icons8.com/color/480/000000/css.png",
   },
   {
     name: "JavaScript",
-    icon: javascript,
+    icon: "https://img.icons8.com/color/480/000000/javascript.png",
   },
   {
     name: "Bootstrap",
@@ -85,11 +85,11 @@ const technologies = [
   },
   {
     name: "React JS",
-    icon: reactjs,
+    icon: "https://img.icons8.com/color/480/000000/react-js.png",
   },
   {
     name: "Tailwind CSS",
-    icon: tailwind,
+    icon: "https://img.icons8.com/color/480/000000/tailwind.png",
   },
   {
     name: "Express JS",
@@ -97,7 +97,7 @@ const technologies = [
   },
   {
     name: "Node JS",
-    icon: nodejs,
+    icon: "nodejs",
   },
   {
     name: "MongoDB",
