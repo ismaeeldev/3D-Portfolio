@@ -104,10 +104,7 @@ const technologies = [
     name: "git",
     icon: git,
   },
-  {
-    name: "gitub",
-    icon: "https://img.icons8.com/color/480/000000/github.png",
-  },
+ 
 
 
 ];
