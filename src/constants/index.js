@@ -75,7 +75,7 @@ const technologies = [
     name: "Bootstrap",
     icon: "https://img.icons8.com/color/480/000000/bootstrap.png",
   },
-  
+
   {
     name: "C++ tool",
     icon: "https://img.icons8.com/color/480/000000/c-plus-plus-logo.png",
@@ -106,7 +106,7 @@ const technologies = [
   },
   {
     name: "gitub",
-    icon: github,
+    icon: "https://img.icons8.com/nolan/512/github.png",
   },
 
 
