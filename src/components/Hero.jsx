@@ -9,6 +9,8 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { BiLinkAlt } from "react-icons/bi";
 import personalPhoto from '../assets/personalPhoto.webp';
 import "./Hero.scss";
+import { isMobile } from "react-device-detect"; // Detects mobile devices
+
 
 const Hero = () => {
 
@@ -79,11 +81,10 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className='computer-canvas'>
-
+      {!isMobile && (
         <ComputersCanvas />
-      </div>
 
+      )}
       <div className='absolute xs:bottom-2 bottom-6 w-10 flex justify-end items-center'>
         <a href='#education'>
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
