@@ -92,7 +92,8 @@
     height: 100vh;
 
     @media screen and (max-width: 640px) {
-        margin-top: 7rem; // Apply margin only on mobile
-        margin-bottom: 2rem;
+        // margin-top: 7rem; 
+        // margin-bottom: 2rem;
+        display: none !important;
     }
 }
