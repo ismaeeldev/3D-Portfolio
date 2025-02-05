@@ -61,15 +61,15 @@ const achievements = [
 const technologies = [
   {
     name: "HTML 5",
-    icon: "https://img.icons8.com/color/480/000000/html.png",
+    icon: html,
   },
   {
     name: "CSS 3",
-    icon: "https://img.icons8.com/color/480/000000/css.png",
+    icon: css,
   },
   {
     name: "JavaScript",
-    icon: "https://img.icons8.com/color/480/000000/javascript.png",
+    icon: javascript,
   },
   {
     name: "Bootstrap",
@@ -83,6 +83,7 @@ const technologies = [
     name: "C++ tool",
     icon: "https://img.icons8.com/color/480/000000/c-plus-plus-logo.png",
   },
+
   {
     name: "React JS",
     icon: "https://img.icons8.com/color/480/000000/react-js.png",
