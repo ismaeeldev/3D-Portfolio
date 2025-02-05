@@ -86,11 +86,11 @@ const technologies = [
 
   {
     name: "React JS",
-    icon: "https://img.icons8.com/color/480/000000/react-js.png",
+    icon: reactjs,
   },
   {
     name: "Tailwind CSS",
-    icon: "https://img.icons8.com/color/480/000000/tailwind.png",
+    icon: tailwind,
   },
   {
     name: "Express JS",
@@ -98,7 +98,7 @@ const technologies = [
   },
   {
     name: "Node JS",
-    icon: "nodejs",
+    icon: nodejs,
   },
   {
     name: "MongoDB",
