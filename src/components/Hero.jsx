@@ -17,16 +17,16 @@ const Hero = () => {
     init(textRef.current, {
       showCursor: true,
       strings: [
-        'Data Structures & Algorithms Learner',
+        'DSA Learner',
         'React Developer',
         'MongoDB Enthusiast',
         'Tech Enthusiast',
-        'Aspiring Software Developer',
+        'Software Developer',
         'Full Stack Developer',
         'Express.js Developer',
-        'Tailwind CSS & Bootstrap Expert',
+        'CSS framework  Expert',
         'JavaScript  Developer',
-        'API Design & Development Enthusiast'
+        'API  Development Enthusiast'
       ]
     });
 
@@ -45,7 +45,7 @@ const Hero = () => {
           </div>
 
 
-          <div className="head2">
+          <div className="head2" >
             <h1 className={`${styles.heroHeadText} text-white`}>
               Hii there, I'm <p className='name text-[#915EFF]'>Muhammad Ismaeel</p>
             </h1>
@@ -80,8 +80,10 @@ const Hero = () => {
         </div>
       </div>
 
+      <div className='computer-canvas'>
 
-      <ComputersCanvas />
+        <ComputersCanvas />
+      </div>
 
       <div className='absolute xs:bottom-2 bottom-6 w-10 flex justify-end items-center'>
         <a href='#education'>
