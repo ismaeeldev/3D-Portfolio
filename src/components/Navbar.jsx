@@ -50,7 +50,7 @@ const Navbar = () => {
             className={`top2 ${"text-secondary"} hover:text-white text-[15px] font-medium cursor-pointer`}
           >
             <a
-              href="https://drive.google.com/file/d/1nJNHzZDgo4SKge7NJ2IhKJs4VqHrknOw/view?usp=sharing" // Replace this with the actual path to your resume
+              href="https://drive.google.com/file/d/1Q033WsbtXwZ-4XGvSaAakiipsQY2Ckao/view?usp=sharing" // Replace this with the actual path to your resume
               download="Ismaeel-Resume.pdf" // Specify the default file name for download
               target="_blank"
               rel="noopener noreferrer"
