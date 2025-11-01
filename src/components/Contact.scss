@@ -1,49 +1,69 @@
 @import "../global.scss";
 
 .contact {
-  flex-direction: row;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
 
   @include mobile2 {
-    flex-direction: column;
+    padding: 1rem 0.5rem;
   }
+}
 
-  .earth {
-    @include mobile2 {
-      flex: none;
-      align-content: center;
+// Responsive improvements
+@media (max-width: 1024px) {
+  .contact {
+    .flex-col {
+      gap: 3rem;
+    }
+
+    .max-w-lg {
+      max-width: 100%;
     }
   }
+}
 
-  .form1 {
+@media (max-width: 768px) {
+  .contact {
+    .p-8 {
+      padding: 1.5rem;
+    }
 
-    @include mobile3 {
-      zoom: 0.8;
+    .space-y-8 {
+      gap: 2rem;
+    }
+
+    .space-y-6 {
+      gap: 1.5rem;
+    }
+
+    .space-y-4 {
+      gap: 1rem;
     }
   }
+}
 
-  .contact__options {
+// Enhanced focus states
+input:focus,
+textarea:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(145, 94, 255, 0.3);
+}
 
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-  }
+// Smooth transitions
+* {
+  transition-property: color, background-color, border-color, transform, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  .contact__option {
-    display: flex;
-    flex-direction: row;
-    padding: 0.6rem;
-    border-radius: 1.2rem;
-    text-align: center;
-    align-items: center;
-    border: 1px solid white;
-    gap: 0.8rem;
-  }
-
-  .contact__option:hover {
-    text-decoration: underline;
-  }
-
-  button {
-    border: 2px solid #49a891;
+// Performance optimizations
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

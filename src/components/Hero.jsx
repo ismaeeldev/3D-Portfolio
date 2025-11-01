@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+// import { ComputersCanvas } from "./canvas";
 import { init } from 'ityped';
 import React, { useEffect, useRef } from "react";
 import { AiOutlineGithub } from "react-icons/ai";
@@ -19,16 +19,12 @@ const Hero = () => {
     init(textRef.current, {
       showCursor: true,
       strings: [
-        'DSA Learner',
-        'React Developer',
-        'MongoDB Enthusiast',
-        'Tech Enthusiast',
-        'Software Developer',
         'Full Stack Developer',
-        'Express.js Developer',
-        'CSS framework  Expert',
-        'JavaScript  Developer',
-        'API  Development Enthusiast'
+        'React Developer',
+        'JavaScript Developer',
+        'MongoDB Enthusiast',
+        'Node.js Developer',
+        'Tech Enthusiast'
       ]
     });
 

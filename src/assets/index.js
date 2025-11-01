@@ -36,6 +36,11 @@ import weatherApp from './project/weatherApp.png';
 import wordAnalyzer from './project/wordAnalyzer.png';
 import toDoApp from './project/toDoApp.png';
 import chatApp from './project/chatApp.jpg'
+import cafeFresco from './project/cafeFresco.png';
+import readless from './project/readless.png';
+import nexaAi from './project/nexaAi.png';
+import cityInsight from './project/cityInsight.png';
+import cafeDashboard from './project/cafeDashboard.png';
 
 export {
   logo,
@@ -58,5 +63,5 @@ export {
   demo,
   clg,
   school,
-  uni, DPortfolio, buzzBriefs, flavorLand, genixGym, hacking, thinkPad, portfolio, toDoApp, weatherApp, wordAnalyzer, chatApp,fiverr
+  uni, DPortfolio, buzzBriefs, flavorLand, genixGym, hacking, thinkPad, portfolio, toDoApp, weatherApp, wordAnalyzer, chatApp, fiverr, cityInsight, cafeFresco, readless, nexaAi, cafeDashboard
 };
