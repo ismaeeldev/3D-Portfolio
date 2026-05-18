@@ -8,7 +8,6 @@ import { list } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { webProject, otherProject, featuredProjects } from "../constants"; // Missing featuredProjects
 import ProjectList from "./ProjectList";
-import ProjectDetail from "./projectDetail";
 import ProjectCard from "./ProjectCard"; // Make sure this is imported
 import "./Project.scss";
 import { useNavigate } from 'react-router-dom';
@@ -16,8 +15,6 @@ import { useNavigate } from 'react-router-dom';
 const Project = () => {
   const [selected, setSelected] = useState("web");
   const [data, setData] = useState([]);
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const sectionRef = useRef();
   const navigate = useNavigate();
   const isInView = useInView(sectionRef, { once: true, threshold: 0.2 });
@@ -47,15 +44,7 @@ const Project = () => {
     }
   }, [selected]);
 
-  const handleProjectClick = (project) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
-  };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setTimeout(() => setSelectedProject(null), 300);
-  };
 
   const navigateToAllProjects = () => {
     navigate('/projects');
@@ -103,7 +92,6 @@ const Project = () => {
                     index={index}
                     {...project}
                     featured={true}
-                    onProjectClick={handleProjectClick}
                   />
                 ))}
               </div>
@@ -149,12 +137,6 @@ const Project = () => {
         </motion.div>
       </motion.div>
 
-      {/* Project Detail Modal */}
-      <ProjectDetail
-        project={selectedProject}
-        isOpen={isModalOpen}
-        onClose={closeModal}
-      />
     </>
   );
 };

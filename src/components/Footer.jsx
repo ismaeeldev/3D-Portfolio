@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { FaHeart, FaCode, FaGithub } from "react-icons/fa";
+import { SiFiverr } from "react-icons/si";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -66,7 +67,7 @@ const Footer = () => {
   };
 
   return (
-    <motion.div
+    <motion.footer
       ref={footerRef}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -140,42 +141,30 @@ const Footer = () => {
           by
         </motion.span>
 
-        {/* Name link */}
-        <motion.a
-          href="https://www.github.com/ismaeeldev"
-          target="_blank"
-          rel="noopener noreferrer"
-          custom={5}
-          variants={textVariants}
-          whileHover={linkHover}
-          className="text-[#667eea] font-semibold hover:text-[#915EFF] transition-colors duration-300 flex items-center gap-2 rounded-2xl p-4"
-        >
-          Muhammad Ismaeel
-          <motion.span
-            whileHover={{ rotate: 360 }}
-            transition={{ duration: 0.5 }}
+        {/* Name and Fiverr links */}
+        <span className="inline-flex items-center gap-1.5 flex-wrap justify-center">
+          <motion.a
+            href="https://www.github.com/ismaeeldev"
+            target="_blank"
+            rel="noopener noreferrer"
+            custom={5}
+            variants={textVariants}
+            whileHover={linkHover}
+            className="text-[#667eea] font-semibold hover:text-[#915EFF] transition-colors duration-300 flex items-center gap-2 rounded-2xl p-4"
           >
-            <FaGithub />
-          </motion.span>
-        </motion.a>
+            Muhammad Ismaeel
+            <motion.span
+              whileHover={{ rotate: 360 }}
+              transition={{ duration: 0.5 }}
+            >
+              <FaGithub />
+            </motion.span>
+          </motion.a>
 
-        {/* Cool emoji */}
-        <motion.span
-          custom={6}
-          variants={textVariants}
-          animate={{
-            rotate: [0, 10, -10, 0],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            repeatDelay: 3
-          }}
-          className="ml-2"
-        >
-          😎
-        </motion.span>
+        
+        </span>
+
+  
       </motion.p>
 
       {/* Copyright year */}
@@ -205,7 +194,7 @@ const Footer = () => {
         animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
         transition={{ delay: 1.4, duration: 1 }}
       />
-    </motion.div>
+    </motion.footer>
   );
 };
 

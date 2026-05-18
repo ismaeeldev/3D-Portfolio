@@ -73,7 +73,7 @@ const Achievement = () => {
 
       {/* Achievements List */}
       <motion.div
-        className={`-mt-16 justify-center p-8 ${styles.paddingX} gap-6 relative z-10`}
+        className="-mt-16 justify-center p-4 sm:p-8 px-6 sm:px-12 gap-6 relative z-10"
         variants={containerVariants}
       >
         <motion.ul className='space-y-4'>

@@ -26,9 +26,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX
-        } w-full flex items-center py-3 fixed top-0 z-20 ${scrolled ? "bg-primary" : "bg-transparent"
-        }`}
+      className={`${styles.paddingX} w-full flex items-center py-4 fixed top-0 z-20 transition-all duration-300 ${scrolled ? "bg-primary/80 backdrop-blur-md border-b border-white/5 shadow-lg" : "bg-transparent border-b border-transparent"}`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
@@ -39,25 +37,22 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain logo' />
-          <p className='sm:block text-white text-[18px] font-bold cursor-pointer flex '>
+          <img src={logo} alt='logo' className='w-11 h-11 object-contain logo' />
+          <p className='navbar-title text-[18px] font-black cursor-pointer'>
             Muhammad Ismaeel
           </p>
         </Link>
 
-        <div className="sm:flex gap-5">
-          <div
-            className={`top2 ${"text-secondary"} hover:text-white text-[15px] font-medium cursor-pointer`}
+        <div className="flex gap-5">
+          <a
+            href="https://drive.google.com/file/d/1Q033WsbtXwZ-4XGvSaAakiipsQY2Ckao/view?usp=sharing"
+            download="Ismaeel-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="resume-btn border border-[#915EFF]/50 text-white px-5 py-2 rounded-full text-[14px] font-bold transition-all duration-300"
           >
-            <a
-              href="https://drive.google.com/file/d/1Q033WsbtXwZ-4XGvSaAakiipsQY2Ckao/view?usp=sharing" // Replace this with the actual path to your resume
-              download="Ismaeel-Resume.pdf" // Specify the default file name for download
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Resume
-            </a>
-          </div>
+            Resume
+          </a>
         </div>
 
       </div>

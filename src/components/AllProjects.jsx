@@ -3,11 +3,15 @@ import { motion } from 'framer-motion';
 import { Search, Filter, Grid, List, Star, ArrowLeft, ExternalLink } from 'lucide-react';
 import { SectionWrapper } from '../hoc';
 import ProjectCard from './ProjectCard';
-import ProjectDetail from './projectDetail';
 import { webProject, otherProject } from '../constants';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { ChevronDown, Tag } from 'lucide-react';
 import { fadeIn } from '../utils/motion';
+
+const slugify = (text) => 
+  text.toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
 
 
 const ProjectsPage = () => {
@@ -15,11 +19,10 @@ const ProjectsPage = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [viewMode, setViewMode] = useState('grid');
     const [sortBy, setSortBy] = useState('featured');
-    const [selectedProject, setSelectedProject] = useState(null);
-    const [isModalOpen, setIsModalOpen] = useState(false);
     const [isCategoryOpen, setIsCategoryOpen] = useState(false);
 
     const location = useLocation();
+    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -75,18 +78,12 @@ const ProjectsPage = () => {
     ];
 
     const handleProjectClick = (project) => {
-        console.log('Project clicked:', project);
-        setSelectedProject(project);
-        setIsModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setIsModalOpen(false);
-        setTimeout(() => setSelectedProject(null), 300);
+        navigate(`/project/${slugify(project.name)}`);
+        window.scrollTo({ top: 0, behavior: "instant" });
     };
 
     return (
-        <div className="min-h-screen pt-20 relative overflow-hidden">
+        <div className="min-h-screen pt-20 relative overflow-hidden bg-primary">
             {/* Background Effects - Similar to your Experience component */}
             <div className="absolute top-1/4 left-10 w-80 h-80 bg-[#915EFF] rounded-full filter blur-3xl opacity-10"></div>
             <div className="absolute bottom-1/4 right-10 w-72 h-72 bg-[#00e9ff] rounded-full filter blur-3xl opacity-10"></div>
@@ -136,7 +133,7 @@ const ProjectsPage = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
-                        className="bg-gradient-to-br from-gray-800/60 to-gray-900/40 backdrop-blur-xl rounded-3xl p-8 mb-12 border border-gray-700/30 shadow-xl"
+                        className="bg-[#151030]/65 backdrop-blur-xl rounded-3xl p-8 mb-12 border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.4)]"
                     >
                         <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
                             {/* 🔍 Search Field - Softer Glow */}
@@ -148,7 +145,7 @@ const ProjectsPage = () => {
                                     placeholder="Discover projects..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
-                                    className="relative w-full pl-12 pr-6 py-4 bg-gray-900/70 border border-gray-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00e9ff]/40 focus:border-transparent backdrop-blur-sm transition-all duration-300"
+                                    className="relative w-full pl-12 pr-6 py-4 bg-[#050816]/75 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00e9ff]/40 focus:border-transparent backdrop-blur-sm transition-all duration-300"
                                 />
                             </div>
 
@@ -159,13 +156,13 @@ const ProjectsPage = () => {
                                     <select
                                         value={selectedCategory}
                                         onChange={(e) => setSelectedCategory(e.target.value)}
-                                        className="appearance-none bg-gray-900/70 border border-gray-700/30 rounded-xl pl-6 pr-12 py-4 text-white focus:outline-none focus:ring-2 focus:ring-[#00e9ff]/40 backdrop-blur-sm cursor-pointer min-w-[200px] transition-all duration-300 hover:bg-gray-800/60"
+                                        className="appearance-none bg-[#050816]/75 border border-white/10 rounded-xl pl-6 pr-12 py-4 text-white focus:outline-none focus:ring-2 focus:ring-[#00e9ff]/40 backdrop-blur-sm cursor-pointer min-w-[200px] transition-all duration-300 hover:bg-[#151030]/80"
                                     >
                                         {categories.map((category) => (
                                             <option
                                                 key={category.id}
                                                 value={category.id}
-                                                className="bg-gray-800 text-white"
+                                                className="bg-[#151030] text-white"
                                             >
                                                 {category.name} ({category.count})
                                             </option>
@@ -197,11 +194,11 @@ const ProjectsPage = () => {
                                     <select
                                         value={sortBy}
                                         onChange={(e) => setSortBy(e.target.value)}
-                                        className="relative bg-gray-900/70 border border-gray-700/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#00e9ff]/40 backdrop-blur-sm appearance-none pr-10 cursor-pointer min-w-[160px] hover:bg-gray-800/60 transition-all duration-300"
+                                        className="relative bg-[#050816]/75 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#00e9ff]/40 backdrop-blur-sm appearance-none pr-10 cursor-pointer min-w-[160px] hover:bg-[#151030]/80 transition-all duration-300"
                                     >
-                                        <option value="featured">✨ Featured First</option>
-                                        <option value="newest">🆕 Newest First</option>
-                                        <option value="name">🔤 Alphabetical</option>
+                                        <option value="featured" className="bg-[#151030]">✨ Featured First</option>
+                                        <option value="newest" className="bg-[#151030]">🆕 Newest First</option>
+                                        <option value="name" className="bg-[#151030]">🔤 Alphabetical</option>
                                     </select>
                                     <Filter className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#00e9ff] w-4 h-4 pointer-events-none" />
                                 </div>
@@ -304,10 +301,10 @@ const ProjectsPage = () => {
                                     // List View Card
                                     <div
                                         onClick={() => handleProjectClick(project)}
-                                        className="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-6 border border-gray-700 hover:border-[#00e9ff] transition-all duration-300 cursor-pointer group"
+                                        className="bg-[#151030]/40 backdrop-blur-lg rounded-2xl p-6 border border-white/5 hover:border-[#00e9ff] hover:shadow-[0_15px_30px_rgba(145,94,255,0.15)] transition-all duration-300 cursor-pointer group"
                                     >
                                         <div className="flex flex-col lg:flex-row gap-6 items-start">
-                                            <div className="flex-shrink-0 w-full lg:w-48 h-32 rounded-lg overflow-hidden">
+                                            <div className="flex-shrink-0 w-full lg:w-48 h-32 rounded-lg overflow-hidden bg-[#050816] border border-white/5">
                                                 <img
                                                     src={project.image}
                                                     alt={project.name}
@@ -336,13 +333,13 @@ const ProjectsPage = () => {
                                                     {project.tags.slice(0, 4).map((tag, tagIndex) => (
                                                         <span
                                                             key={tagIndex}
-                                                            className="px-2 py-1 bg-gray-700 text-[#00e9ff] text-xs rounded border border-[#00e9ff]/20"
+                                                            className="px-2 py-1 bg-[#151030]/80 text-[#00e9ff] text-xs rounded border border-[#00e9ff]/20 font-medium"
                                                         >
                                                             {tag.name}
                                                         </span>
                                                     ))}
                                                     {project.tags.length > 4 && (
-                                                        <span className="px-2 py-1 bg-gray-700 text-gray-400 text-xs rounded">
+                                                        <span className="px-2 py-1 bg-[#151030]/80 text-gray-400 text-xs rounded border border-white/5 font-medium">
                                                             +{project.tags.length - 4} more
                                                         </span>
                                                     )}
@@ -382,16 +379,8 @@ const ProjectsPage = () => {
                         </p>
                     </motion.div>
                 </div>
-            </motion.div>
-
-            {/* Project Detail Modal */}
-            <ProjectDetail
-                project={selectedProject}
-                isOpen={isModalOpen}
-                onClose={closeModal}
-            />
-        </div>
+            </motion.div>        </div>
     );
 };
 
-export default SectionWrapper(ProjectsPage, 'projects');
+export default ProjectsPage;

@@ -3,12 +3,22 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ExternalLink, Github, Play, Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const ProjectDetail = ({ project, isOpen, onClose }) => {
-    useEffect(() => {
-        console.log('Project Detail Props:', { project, isOpen, onClose });
-    }, [project, isOpen, onClose]);
-
     const [activeImage, setActiveImage] = useState(0);
     const [currentFeedback, setCurrentFeedback] = useState(0);
+
+    // Lock background scroll and reset state indices on open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+            setActiveImage(0);
+            setCurrentFeedback(0);
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isOpen]);
 
     if (!project) return null;
 
@@ -52,35 +62,41 @@ const ProjectDetail = ({ project, isOpen, onClose }) => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50"
+                        className="fixed inset-0 bg-black/70 backdrop-blur-md z-[100]"
                         onClick={onClose}
                     />
 
                     {/* Modal */}
-                    <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
+                    <div className="fixed inset-0 flex items-center justify-center z-[100] p-4 sm:p-6">
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            initial={{ opacity: 0, scale: 0.92, y: 30 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                            className="bg-gray-900 rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-hidden border border-gray-700"
+                            exit={{ opacity: 0, scale: 0.92, y: 30 }}
+                            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                            className="bg-[#0b0c16] rounded-3xl max-w-5xl w-full max-h-[85vh] overflow-hidden border border-white/10 shadow-2xl relative shadow-purple-500/5 flex flex-col"
                         >
                             {/* Header */}
-                            <div className="flex justify-between items-center p-6 border-b border-gray-700">
-                                <h2 className="text-2xl font-bold text-white">{project.name || 'Project Title'}</h2>
+                            <div className="flex justify-between items-center px-6 sm:px-8 py-5 border-b border-white/10 bg-black/40 backdrop-blur-md relative z-20 flex-shrink-0">
+                                <h2 className="text-xl sm:text-2xl font-black text-white bg-gradient-to-r from-white to-[#aaa6c3] bg-clip-text text-transparent">
+                                    {project.name || 'Project Title'}
+                                </h2>
                                 <button
                                     onClick={onClose}
-                                    className="p-2 hover:bg-gray-800 rounded-lg transition-colors"
+                                    className="p-2 text-white/60 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300 hover:rotate-90"
                                 >
-                                    <X className="w-6 h-6 text-white" />
+                                    <X className="w-6 h-6" />
                                 </button>
                             </div>
 
                             {/* Content */}
-                            <div className="overflow-y-auto max-h-[calc(90vh-80px)]">
+                            <div className="overflow-y-auto flex-1 scrollbar-thin">
                                 {/* Laptop Mockup Section */}
-                                <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 py-12 px-8">
+                                <div className="relative bg-gradient-to-b from-black/30 to-transparent py-8 px-4 sm:px-8 border-b border-white/5 overflow-hidden flex-shrink-0">
+                                    {/* Ambient Glow Backing */}
+                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2/3 h-2/3 bg-gradient-to-tr from-[#915EFF]/10 to-[#00e9ff]/10 rounded-full filter blur-3xl pointer-events-none"></div>
+
                                     {/* Laptop Container */}
-                                    <div className="max-w-4xl mx-auto">
+                                    <div className="max-w-4xl mx-auto relative z-10">
                                         {/* Laptop Top */}
                                         <div className="relative mx-auto w-full max-w-[800px] h-0 pb-[56.25%] bg-gray-800 rounded-t-2xl border-t-4 border-l-4 border-r-4 border-gray-600">
                                             {/* Laptop Screen */}
@@ -110,14 +126,14 @@ const ProjectDetail = ({ project, isOpen, onClose }) => {
 
                                     {/* Image Thumbnails */}
                                     {images.length > 1 && (
-                                        <div className="flex justify-center gap-4 mt-8">
+                                        <div className="flex justify-center gap-4 mt-8 relative z-10">
                                             {images.map((image, index) => (
                                                 <button
                                                     key={index}
                                                     onClick={() => setActiveImage(index)}
-                                                    className={`w-20 h-12 rounded border-2 overflow-hidden transition-all ${activeImage === index
-                                                            ? 'border-[#00e9ff] scale-110'
-                                                            : 'border-gray-600 hover:border-gray-400'
+                                                    className={`w-20 h-12 rounded-lg border-2 overflow-hidden transition-all duration-300 ${activeImage === index
+                                                            ? 'border-[#00e9ff] scale-110 shadow-[0_0_15px_rgba(0,233,255,0.3)]'
+                                                            : 'border-white/10 hover:border-white/40 hover:scale-105'
                                                         }`}
                                                 >
                                                     <img
@@ -135,7 +151,7 @@ const ProjectDetail = ({ project, isOpen, onClose }) => {
                                 </div>
 
                                 {/* Project Details */}
-                                <div className="p-6 bg-gray-800/40 backdrop-blur-sm">
+                                <div className="p-6 bg-transparent">
                                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                                         {/* Main Content */}
                                         <div className="lg:col-span-2 space-y-6">

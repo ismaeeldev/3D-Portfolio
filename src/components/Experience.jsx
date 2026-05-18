@@ -29,6 +29,7 @@ const ExperienceCard = ({ experience }) => {
         filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.3))"
       }}
       date={experience.date}
+      dateClassName="text-white lg:text-secondary font-semibold !opacity-90 px-4"
       iconStyle={{
         background: experience.iconBg,
         boxShadow: "0 0 0 4px #1d1836, 0 5px 15px rgba(0,0,0,0.3)",
@@ -49,18 +50,28 @@ const ExperienceCard = ({ experience }) => {
 
       <div className="relative z-10">
         <div>
-          <h3 className='text-white text-[22px] font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent'>
+          <h3 className='text-white text-[22px] font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent text-left'>
             {experience.title}
           </h3>
-          <p
-            className='text-secondary text-[15px] font-semibold mt-2'
-            style={{ margin: 0 }}
-          >
-            {experience.company_name}
-          </p>
+          <div className="flex flex-wrap items-center gap-2 mt-2">
+            <p className='text-secondary text-[15px] font-semibold' style={{ margin: 0 }}>
+              {experience.company_name}
+            </p>
+            {experience.company_name === "Fiverr" && (
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-500/10 text-green-400 border border-green-500/20 shadow-[0_0_12px_rgba(76,175,80,0.15)] select-none">
+                <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
+                Level 1 Seller
+              </span>
+            )}
+          </div>
+          {/* Responsive Inline Date Badge */}
+          <div className="timeline-date-inline mt-2.5 flex items-center gap-1.5 text-secondary text-[13px] font-semibold select-none text-left">
+            <span className="inline-block w-2 h-2 rounded-full bg-[#915EFF] animate-pulse"></span>
+            <span>{experience.date}</span>
+          </div>
         </div>
 
-        <ul className='mt-6 list-disc ml-5 space-y-3'>
+        <ul className='mt-6 list-disc ml-5 space-y-3 text-left'>
           {experience.points.map((point, index) => (
             <li
               key={`experience-point-${index}`}
@@ -71,19 +82,21 @@ const ExperienceCard = ({ experience }) => {
           ))}
         </ul>
 
-        <div className="mt-6 pt-4 border-t border-white/10">
-          <a
-            href={experience.link}
-            className="flex justify-center items-center gap-2 blue-text-gradient font-semibold text-[15px] hover:scale-105 transition-transform duration-200"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Project
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </a>
-        </div>
+        {experience.link && (
+          <div className="mt-6 pt-4 border-t border-white/10">
+            <a
+              href={experience.link}
+              className="flex justify-center items-center gap-2 blue-text-gradient font-semibold text-[15px] hover:scale-105 transition-transform duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {experience.company_name === "Fiverr" ? "View Profile" : "View Project"}
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        )}
       </div>
     </VerticalTimelineElement>
   );

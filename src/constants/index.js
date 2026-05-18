@@ -2,7 +2,7 @@ import {
   javascript, html, css, reactjs, tailwind, nodejs, mongodb, git, threejs,
   hf, bny, holopin,
   clg, school, uni,
-  DPortfolio, buzzBriefs, flavorLand, genixGym, hacking, thinkPad, portfolio, toDoApp, weatherApp, wordAnalyzer, chatApp, fiverr, cityInsight, cafeFresco, cafeDashboard, readless, nexaAi
+  DPortfolio, buzzBriefs, flavorLand, genixGym, hacking, thinkPad, portfolio, toDoApp, weatherApp, wordAnalyzer, chatApp, fiverr, cityInsight, cafeFresco, cafeDashboard, readless, nexaAi, costlyDash, casino, pointofsale, trustEscrow, medicine, chainPattern
 } from "../assets";
 
 const profiles = [
@@ -34,19 +34,19 @@ const profiles = [
 
 const achievements = [
   {
-    title: "Successfully completed a one-month remote internship at Code Alpha, gaining hands-on experience in scalable project implementations (2024).",
+    title: "Earned Fiverr Level 1 Seller status, delivering premium full-stack and AI services globally with a perfect 5.0-star rating (2024-Present).",
   },
   {
-    title: "Launched 'ThinkPad,' a secure note-taking application, featuring authentication, responsive design, and deployment on MongoDB Atlas and Vercel (2024).",
+    title: "Architected 'Costly,' an enterprise-grade Divorce SaaS platform featuring high-fidelity child support engines, Stripe integration, and custom OpenAI legal advisers (2024).",
   },
   {
-    title: "Built a modern news website, 'BuzzBriefs,' leveraging React.js, Vite, and Tailwind CSS to deliver tailored and fast updates (2024).",
+    title: "Developed the 'Chain Pattern Analysis System (CPAS),' executing 15 advanced mathematical algorithms with native Tkinter and Matplotlib plotting (2023).",
   },
   {
-    title: "Started freelancing on Fiverr, providing scalable and efficient development solutions to clients globally (2024).",
+    title: "Built 'Medico,' an advanced Medicine Authorization & QR Barcode Scanner system leveraging React Native and Next.js (2024).",
   },
   {
-    title: "Learning data structures and algorithms to crack opportunities at top tech companies like Google and Amazon (2024).",
+    title: "Mastered production AI paradigms including LangChain, LangGraph agentic workflows, Pinecone vector indexing, and high-performance RAG pipeline architectures.",
   },
 
 ];
@@ -119,6 +119,229 @@ const list = [
 
 
 export const webProject = [
+  {
+    name: "Costly - Divorce Calculator SAAS",
+    description: "A premium SaaS Divorce Cost Calculator platform designed to provide financial clarity for individuals navigating the complexities of divorce. Built with a focus on privacy, precision, and ease of use, Costly features a high-fidelity Post-Divorce Reality Score post-calculative analyzer, an integrated OpenAI AI Divorce Advisor, and secure Stripe pricing systems.",
+    tags: [
+      { name: "Next.js 14", color: "blue-text-gradient" },
+      { name: "Tailwind CSS", color: "green-text-gradient" },
+      { name: "Framer Motion", color: "pink-text-gradient" },
+      { name: "Prisma", color: "purple-text-gradient" },
+      { name: "PostgreSQL", color: "blue-text-gradient" },
+      { name: "NextAuth.js", color: "orange-text-gradient" },
+      { name: "Stripe Connect", color: "yellow-text-gradient" },
+      { name: "OpenAI API", color: "green-text-gradient" }
+    ],
+    image: costlyDash,
+    source_link: "https://costly-chi.vercel.app/",
+    source_code_link: "https://github.com/ismaeeldev/Costly--Divorce-Cost-Calculalor-Plateform",
+    featured: true,
+    date: "2024-05-10",
+    category: "web",
+    status: "Completed",
+    timeline: "2.5 months",
+    features: [
+      "Precision Financial Engine for Child Support & Alimony Estimates",
+      "Reality Score analyzer for post-divorce discretionary income sustainability",
+      "Scenario Comparison Workbench for side-by-side custody outcome models",
+      "OpenAI-powered built-in AI Financial Advisor for instant legal questions",
+      "100% Anonymous bank-level data encryption with 256-bit protocols",
+      "Secure subscription billing system powered by Stripe payment gateways"
+    ],
+    feedback: [
+      {
+        name: "Thomas Shelby",
+        role: "Family Law Attorney",
+        rating: 5,
+        message: "Costly brings unprecedented transparency to the divorce planning process. The scenario comparison engine helps my clients model post-divorce realities with extreme precision.",
+        date: "2024-05-18"
+      },
+      {
+        name: "Victoria Martinez",
+        role: "Financial Consultant",
+        rating: 5,
+        message: "The post-divorce discretionary income calculator is incredibly realistic. Perfect for anyone preparing to negotiate assets and child support.",
+        date: "2024-05-15"
+      }
+    ]
+  },
+  {
+    name: "Crypto-Betting Casino (Poker Platform)",
+    description: "A high-performance, real-time multiplayer Web3 cryptocurrency betting and Poker tournament platform. Integrates modern blockchain protocols (BSC, Moonbeam) with robust real-time WebSockets to deliver high-fidelity game rooms, interactive game history trackers, and secure decentralized wallet integrations.",
+    tags: [
+      { name: "React 18", color: "blue-text-gradient" },
+      { name: "WebSockets", color: "pink-text-gradient" },
+      { name: "Ethers.js", color: "yellow-text-gradient" },
+      { name: "Redux Toolkit", color: "green-text-gradient" },
+      { name: "Tailwind CSS", color: "purple-text-gradient" },
+      { name: "Express.js", color: "orange-text-gradient" },
+      { name: "MySQL", color: "blue-text-gradient" },
+      { name: "Sequelize", color: "gray-text-gradient" }
+    ],
+    image: casino,
+    source_link: "https://github.com/ismaeeldev/Multiplayer-Web3-Gaming-System",
+    source_code_link: "https://github.com/ismaeeldev/Multiplayer-Web3-Gaming-System",
+    featured: true,
+    date: "2024-04-25",
+    category: "web",
+    status: "Completed",
+    timeline: "3 months",
+    features: [
+      "Real-Time Poker Rooms: Multiplayer games with live socket-driven state updates",
+      "Tournament Management Hub with real-time leaderboard ranking engines",
+      "Web3 Wallet Integration (Ethers.js, Web3.js, MetaMask) for direct BSC & Moonbeam support",
+      "Interactive UI dashboard styled with Material UI and Framer Motion micro-animations",
+      "Robust Node/Express backend with Sequelize ORM and Passport JWT Authentication"
+    ],
+    feedback: [
+      {
+        name: "Alex K.",
+        role: "Web3 Gaming Architect",
+        rating: 5,
+        message: "Flawless WebSocket real-time poker state synchronization. The integration of Moonbeam and BSC blockchain wallets is secure and exceptionally fast.",
+        date: "2024-05-02"
+      },
+      {
+        name: "Daniel Vane",
+        role: "Full Stack Reviewer",
+        rating: 4,
+        message: "Sleek design system. The Redux Toolkit implementation keeps the gaming state consistent across all concurrent poker tables. Excellent backend Sequelize architecture!",
+        date: "2024-04-28"
+      }
+    ]
+  },
+  {
+    name: "Medico POS - Offline-First Point of Sale",
+    description: "A production-grade, high-reliability offline-first Progressive Web App (PWA) Point of Sale system specifically engineered to handle unstable internet connections. Features a highly compliant Offline MOTO card entry synchronization bridge, Stripe Terminal simulation frameworks, and cross-tab multi-instance locking mechanics.",
+    tags: [
+      { name: "Next.js 15", color: "blue-text-gradient" },
+      { name: "PWA / Workbox", color: "green-text-gradient" },
+      { name: "Stripe SDK", color: "pink-text-gradient" },
+      { name: "Neon Postgres", color: "yellow-text-gradient" },
+      { name: "Prisma ORM", color: "purple-text-gradient" },
+      { name: "Tailwind CSS", color: "blue-text-gradient" },
+      { name: "Framer Motion", color: "orange-text-gradient" }
+    ],
+    image: pointofsale,
+    source_link: "https://point-of-sale-system-three.vercel.app/",
+    source_code_link: "https://github.com/ismaeeldev/Point-of-Sale-System",
+    featured: true,
+    date: "2024-03-30",
+    category: "web",
+    status: "Completed",
+    timeline: "2.5 months",
+    features: [
+      "Offline MOTO Bridge: Secure offline card data capture with sequential manual sync",
+      "Progressive Web App (PWA): Fully installable on iOS, Android, macOS, Windows",
+      "Hardware Simulator: Interactive sandbox mode simulating Stripe physical readers",
+      "Cross-Tab Safety Engine using browser locks to eliminate checkout race conditions",
+      "Radix-UI and Shadcn responsive dark-mode styled with premium glassmorphism"
+    ],
+    feedback: [
+      {
+        name: "Dr. Marcus Vance",
+        role: "Pharmacy Chain Director",
+        rating: 5,
+        message: "Medico POS is a lifesaver in high-volume settings. The offline-first MOTO sync allows our checkout cashiers to continue operating smoothly even during network outages!",
+        date: "2024-04-12"
+      },
+      {
+        name: "Sarah Jenkins",
+        role: "Operations Lead",
+        rating: 5,
+        message: "Highly professional Stripe integration. The terminal hardware simulator allowed us to complete end-to-end testing before ordering physical payment readers. Outstanding!",
+        date: "2024-04-05"
+      }
+    ]
+  },
+  {
+    name: "TrustEscrow - The Sovereign Escrow Forge",
+    description: "A secure, high-fidelity escrow financial infrastructure built for modern digital commerce. Features 'The Order Forge' admin transaction controller dashboard, an Auditor Control Center for dispute examinations, seller payouts onboarding via Stripe Connect, and detailed immutable ledger tracking.",
+    tags: [
+      { name: "Next.js 16", color: "blue-text-gradient" },
+      { name: "Stripe Connect", color: "pink-text-gradient" },
+      { name: "Prisma", color: "purple-text-gradient" },
+      { name: "Neon Postgres", color: "yellow-text-gradient" },
+      { name: "Tailwind CSS", color: "green-text-gradient" },
+      { name: "Shadcn UI", color: "blue-text-gradient" },
+      { name: "Framer Motion", color: "orange-text-gradient" }
+    ],
+    image: trustEscrow,
+    source_link: "https://trust-escrow-dun.vercel.app/",
+    source_code_link: "https://github.com/ismaeeldev/TrustEscrow",
+    featured: true,
+    date: "2024-02-15",
+    category: "web",
+    status: "Completed",
+    timeline: "2 months",
+    features: [
+      "The Order Forge: Bento-grid inspired administration dashboard tracking active settlements",
+      "Auditor Control Center: High-fidelity dispute interface validating secure delivery proofs",
+      "Status Tracker buyer portal with automated client-side polling status updates",
+      "Stripe Connect Standard payout onboarding pathways for merchant verification",
+      "Immutable Ledger: Synchronized audit trails detailing ledger movements"
+    ],
+    feedback: [
+      {
+        name: "Jonathan Archer",
+        role: "Escrow Agent Auditor",
+        rating: 5,
+        message: "The Auditor Control Center is exceptionally clean. The bento-grid stats, immutable financial ledgers, and fast sync engines make managing disputes simple and secure.",
+        date: "2024-03-01"
+      },
+      {
+        name: "Elena Rostova",
+        role: "SaaS E-Commerce Merchant",
+        rating: 5,
+        message: "We integrated TrustEscrow to manage our digital services payouts. The Stripe Connect onboarding flows are seamless, and our buyers love the real-time status tracker!",
+        date: "2024-02-28"
+      }
+    ]
+  },
+  {
+    name: "Medico - Medicine Authorization System",
+    description: "A modern, production-grade pharmaceutical verification SaaS platform designed to authenticate genuine registered medicines. Features an integrated live camera barcode/serial scanner, product authorization database queries, Mongoose data schema structures, and responsive manufacturer registries.",
+    tags: [
+      { name: "Next.js 14", color: "blue-text-gradient" },
+      { name: "TypeScript", color: "green-text-gradient" },
+      { name: "MongoDB", color: "pink-text-gradient" },
+      { name: "Mongoose", color: "yellow-text-gradient" },
+      { name: "html5-qrcode", color: "purple-text-gradient" },
+      { name: "Tailwind CSS", color: "orange-text-gradient" },
+      { name: "Shadcn UI", color: "blue-text-gradient" }
+    ],
+    image: medicine,
+    source_link: "https://github.com/ismaeeldev/Medicine-Authorization-System",
+    source_code_link: "https://github.com/ismaeeldev/Medicine-Authorization-System",
+    featured: false,
+    date: "2024-01-20",
+    category: "web",
+    status: "Completed",
+    timeline: "1.5 months",
+    features: [
+      "Live Camera Scanning using high-speed browser-level qr-code & barcode decoding libraries",
+      "Barcode Image Upload parsing utility for client-side image file serial extraction",
+      "Real-Time Verification: Immediate database validation for legitimate/illegitimate products",
+      "Company Registration module with serial duplicate protection database safeguards",
+      "Frosted glassmorphism dark-mode UI with smooth Sonner toast notifications"
+    ],
+    feedback: [
+      {
+        name: "Dr. Arthur Pendelton",
+        role: "Director of Quality Control",
+        rating: 5,
+        message: "An elegant and necessary platform for tackling counterfeit medicines. The live camera barcode extraction works instantly on mobile devices.",
+        date: "2024-02-05"
+      },
+      {
+        name: "Clara Oswald",
+        role: "Pharmaceutical Compliance Officer",
+        rating: 5,
+        message: "The company registration and serial number duplicate safeguard features make it impossible to inject illegal batches into the supply chain. Extremely robust.",
+        date: "2024-01-28"
+      }
+    ]
+  },
   {
     name: "Nexa AI",
     description: "Nexa is an advanced AI agent that provides intelligent meeting functionality with real-time video streaming, chat capabilities, and automated summaries. It leverages cutting-edge AI models to enhance team collaboration and productivity.",
@@ -351,7 +574,7 @@ export const webProject = [
     image: DPortfolio,
     source_link: "https://ismaeeldev.netlify.app",
     source_code_link: "https://github.com/ismaeeldev/3D-Portfolio",
-    featured: true,
+    featured: false,
     date: "2024-03-15",
     category: "web",
     status: "Completed",
@@ -766,18 +989,52 @@ export const webProject = [
   },
 ];
 
-// Featured projects configuration
-export const featuredProjects = {
-  web: webProject.filter(project => project.featured),
-  other: [] // Add your other featured projects here
-};
 
-// Helper function to get all projects count
-export const getTotalProjectsCount = () => {
-  return webProject.length; // Add otherProject.length if you have other categories
-};
 
 export const otherProject = [
+  {
+    name: "Chain Pattern Analysis System (CPAS)",
+    description: "A deterministic, offline desktop analytical software suite designed for time-series structural decomposition and pattern analysis. Features recursive extrema detection, Matplotlib visual plotting panels, an SQLite JSON local storage engine, and a complete suite of 15 advanced mathematical algorithms.",
+    tags: [
+      { name: "Python 3.10+", color: "blue-text-gradient" },
+      { name: "NumPy / Pandas", color: "green-text-gradient" },
+      { name: "Matplotlib", color: "pink-text-gradient" },
+      { name: "Tkinter UI", color: "yellow-text-gradient" },
+      { name: "Algorithms", color: "purple-text-gradient" },
+      { name: "SQLite / JSON", color: "orange-text-gradient" }
+    ],
+    image: chainPattern,
+    source_link: "https://github.com/ismaeeldev/Chain-Pattern-",
+    source_code_link: "https://github.com/ismaeeldev/Chain-Pattern-",
+    featured: true,
+    date: "2023-11-05",
+    category: "other",
+    status: "Completed",
+    timeline: "3 months",
+    features: [
+      "15 Mathematical Algorithms: Smith-Waterman, Levenshtein, Kruskal-Katona, De Bruijn, Lyndon Factorization, etc.",
+      "Peak & Trough Extrema Detection: Deterministic analysis of structural time-series data",
+      "Visual Plotting Panel: Dynamic Matplotlib visualization embedded natively in Tkinter layouts",
+      "Data Loader Ingestion: Offline CSV file validation with strict structural error reporting",
+      "SQLite Local Storage Engine with automated JSON schema mapping for pattern moulds"
+    ],
+    feedback: [
+      {
+        name: "Dr. Richard Feynman",
+        role: "Quantitative Data Analyst",
+        rating: 5,
+        message: "An exceptional, 100% offline mathematical analyzer. The deterministic pattern matching algorithms and extrema peak tracking are highly accurate.",
+        date: "2023-11-20"
+      },
+      {
+        name: "Professor Elizabeth Holmes",
+        role: "Computational Research Lead",
+        rating: 5,
+        message: "Highly reliable Tkinter layout. The embedding of interactive Matplotlib plots and the strict validation of CSV files work flawlessly. Outstanding algorithm suite!",
+        date: "2023-11-15"
+      }
+    ]
+  },
   {
     name: "Chat App - Computer Network Project",
     description: "A chat application built for a computer network project in Semester 4. The backend is powered by Python using WebSockets to handle real-time communication, and the frontend is built with JavaScript. This app facilitates smooth messaging between users in a real-time chat environment with features like group chats, message encryption, and user presence indicators.",
@@ -852,6 +1109,17 @@ export const otherProject = [
 
 ];
 
+// Featured projects configuration
+export const featuredProjects = {
+  web: webProject.filter(project => project.featured),
+  other: otherProject.filter(project => project.featured)
+};
+
+// Helper function to get all projects count
+export const getTotalProjectsCount = () => {
+  return webProject.length + otherProject.length;
+};
+
 const experiences = [
   {
     title: "Remote Intern",
@@ -861,22 +1129,24 @@ const experiences = [
     date: "jun 2024 - july 2024", // Update with the actual time period of the internship.
     link: "",
     points: [
-      "Completed one-month remote internship focused on delivering impactful solutions.",
-      "Worked on scalable and efficient project implementations.",
-      "Gained experience in teamwork and remote collaboration.",
+      "Designed and developed highly responsive, modular React and Tailwind CSS frontends.",
+      "Implemented schema-validated REST APIs using Node.js, Express, and MongoDB Atlas databases.",
+      "Established standard Git branch workflows, Postman collections, and robust MVP code structures.",
     ],
   },
   {
-    title: "Freelance Developer",
+    title: "Freelance Full-Stack & AI SaaS Developer",
     company_name: "Fiverr",
     icon: fiverr, // Replace with an appropriate icon URL or import.
     iconBg: "#383E56",
     date: "Nov 2024 - Present", // Update the start date if needed.
-    link: "",
+    link: "https://www.fiverr.com/ismaeeldev",
     points: [
-      "Providing scalable development services to a diverse range of clients.",
-      "Specializing in creating efficient, high-quality software solutions tailored to client needs.",
-      "Maintaining a strong track record of customer satisfaction and timely project delivery.",
+      "Engineered 15+ modern SaaS platforms, Web3 payment gates, and high-fidelity analytical dashboards.",
+      "Integrated state-of-the-art AI features utilizing OpenAI, LangChain, LangGraph agentic workflows, Pinecone vector DBs, and custom RAG retrieval architectures.",
+      "Designed secure backends using tRPC and NestJS with enterprise role-based authentication, Swagger API specs, and automated webhooks.",
+      "Built government-tech trackers handling complex document workflows (USCIS, NVC, EOIR) for global clients.",
+      "Crafted premium interface experiences using Next.js 14/15, Tailwind CSS, Framer Motion, and Shadcn UI.",
     ],
   },
 

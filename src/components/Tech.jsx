@@ -38,7 +38,8 @@ import {
   SiSwagger,
   SiJquery,
   SiApollographql,
-  SiKoa
+  SiKoa,
+  SiOpenai
 } from "react-icons/si";
 import { FaDatabase, FaTools, FaMobile, FaRobot } from "react-icons/fa";
 
@@ -226,6 +227,12 @@ const technologies = [
 
   // AI/ML
   {
+    name: "OpenAI API",
+    icon: SiOpenai,
+    color: "#00A67E",
+    category: "ai"
+  },
+  {
     name: "LangChain",
     icon: FaRobot,
     color: "#10B981",
@@ -238,9 +245,21 @@ const technologies = [
     category: "ai"
   },
   {
-    name: "Chroma DB",
+    name: "Pinecone DB",
     icon: FaDatabase,
     color: "#EC4899",
+    category: "ai"
+  },
+  {
+    name: "Agentic Workflows",
+    icon: FaRobot,
+    color: "#7C3AED",
+    category: "ai"
+  },
+  {
+    name: "RAG Systems",
+    icon: FaDatabase,
+    color: "#FF9800",
     category: "ai"
   },
 

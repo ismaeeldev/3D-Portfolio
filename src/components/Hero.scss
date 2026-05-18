@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
 
 .ityped-cursor {
-    animation: blink 2s infinite;
+    animation: blink 1s infinite;
+    color: #915EFF;
+    font-weight: 700;
 }
 
 @keyframes blink {
@@ -13,76 +15,100 @@
     100% {
         opacity: 0;
     }
-
 }
 
-.head1 {
-    top: 80px;
+.name {
+    font-family: 'Poppins', 'Kalam', sans-serif;
+    font-weight: 700;
+}
 
-    .head2 {
-        line-height: 95px;
+.link1 {
+    a {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 0.85rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-        @include mobile4 {
-            line-height: 70px;
-        }
+        &:hover {
+            color: #ffffff;
+            transform: translateY(-4px) scale(1.15);
 
-        h3 span {
-            @include mobile4 {
-                font-size: 20px;
-            }
-
-        }
-
-        .link1 {
-            line-height: 40px;
-            background: rgba(0, 0, 0, 0.3);
-            width: max-content;
-            display: block;
-            display: flex;
-            z-index: 2;
-            gap: 0.8rem;
-            border-radius: 3rem;
-
-            a {
-                background: transparent;
-                padding: 0.9rem;
-                border-radius: 50%;
-                display: flex;
-                color: var(--color-light);
-                font-size: 2rem;
+            svg {
+                transform: rotate(12deg);
             }
         }
-    }
 
-    .name {
-        font-family: 'poppins', 'kalam', 'sans-serif';
-        font-weight: 700;
+        svg {
+            transition: transform 0.3s ease;
+        }
+
+        // Custom individual social button colors
+        &:nth-child(1):hover { // GitHub
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.08);
+        }
+
+        &:nth-child(2):hover { // LinkedIn
+            background: rgba(0, 233, 255, 0.08);
+            border-color: rgba(0, 233, 255, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 233, 255, 0.15);
+        }
+
+        &:nth-child(3):hover { // Instagram
+            background: rgba(255, 107, 107, 0.08);
+            border-color: rgba(255, 107, 107, 0.3);
+            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.15);
+        }
     }
 }
 
-
+/* Shifting Avatar Gradient & Breathing Glow Ring */
 .imgcontainer1 {
-    right: 4rem;
-    top: 6rem;
-    width: 300px;
-    height: 300px;
-    border-radius: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @include mobile3 {
-        width: 200px;
-        height: 200px;
-        right: 5px;
+    background-size: 200% 200%;
+    animation: gradient-move 6s ease infinite;
+    position: relative;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        inset: -3px;
+        background: inherit;
+        border-radius: inherit;
+        filter: blur(15px);
+        opacity: 0.5;
+        z-index: -1;
+        animation: pulse-glow 3s ease-in-out infinite alternate;
+        pointer-events: none;
     }
+}
 
-    @include mobile2 {
-        display: none;
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
     }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
-    img {
-        height: 90%;
-        border-radius: 45%;
+@keyframes pulse-glow {
+    0% {
+        transform: scale(0.97);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1.04);
+        opacity: 0.75;
     }
 }

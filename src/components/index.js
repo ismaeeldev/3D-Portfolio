@@ -10,6 +10,9 @@ import Profile from './Profile';
 import Achievement from './Achievement';
 import Education from './Education';
 import Footer from './Footer'
+import ProjectDetails from './ProjectDetails';
+import SEO from './SEO';
+import Testimonials from './Testimonials';
 
 export {
   Hero,
@@ -27,4 +30,7 @@ export {
   Profile,
   Footer,
   Achievement,
+  ProjectDetails,
+  SEO,
+  Testimonials,
 }

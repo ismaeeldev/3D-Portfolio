@@ -41,6 +41,18 @@ import readless from './project/readless.png';
 import nexaAi from './project/nexaAi.png';
 import cityInsight from './project/cityInsight.png';
 import cafeDashboard from './project/cafeDashboard.png';
+import costlyDash from './project/costly-dash.png';
+import casino from './project/casino.png';
+import pointofsale from './project/pointofsale.png';
+import trustEscrow from './project/trustEscrow.png';
+import medicine from './project/medicine.png';
+import chainPattern from './project/chainPattern.png';
+import review1 from './project/review1.png';
+import review2 from './project/review2.png';
+import review3 from './project/review3.png';
+import review4 from './project/review4.png';
+import review5 from './project/review5.png';
+import review6 from './project/review6.png';
 
 export {
   logo,
@@ -63,5 +75,6 @@ export {
   demo,
   clg,
   school,
-  uni, DPortfolio, buzzBriefs, flavorLand, genixGym, hacking, thinkPad, portfolio, toDoApp, weatherApp, wordAnalyzer, chatApp, fiverr, cityInsight, cafeFresco, readless, nexaAi, cafeDashboard
+  uni, DPortfolio, buzzBriefs, flavorLand, genixGym, hacking, thinkPad, portfolio, toDoApp, weatherApp, wordAnalyzer, chatApp, fiverr, cityInsight, cafeFresco, readless, nexaAi, cafeDashboard, costlyDash, casino, pointofsale, trustEscrow, medicine, chainPattern,
+  review1, review2, review3, review4, review5, review6
 };

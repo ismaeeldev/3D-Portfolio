@@ -202,3 +202,28 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
+/* 📅 Responsive Vertical Timeline Date Display */
+@media only screen and (max-width: 1169px) {
+  .vertical-timeline-element-date {
+    display: none !important;
+  }
+  .timeline-date-inline {
+    display: flex !important;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline-element-date {
+    display: block !important;
+    color: #aaa6c3 !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    opacity: 0.95 !important;
+    padding: 8px 16px !important;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5) !important;
+  }
+  .timeline-date-inline {
+    display: none !important;
+  }
+}

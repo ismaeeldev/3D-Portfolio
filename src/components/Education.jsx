@@ -48,7 +48,7 @@ const FeedbackCard = ({
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       whileHover={hoverEffect}
-      className='Box2 p-8 rounded-3xl xs:w-[350px] w-full h-[420px] flex flex-col justify-between relative overflow-hidden group'
+      className='Box2 p-6 sm:p-8 rounded-3xl w-full max-w-[360px] h-auto min-h-[420px] flex flex-col justify-between relative overflow-hidden group'
     >
       {/* Animated Background Gradient */}
       <motion.div 
@@ -236,7 +236,7 @@ const Education = () => {
       {/* Cards Grid */}
       <motion.div 
         variants={containerVariants}
-        className={`-mt-4 justify-center pb-20 ${styles.paddingX} flex flex-wrap gap-8 relative z-10`}
+        className="-mt-10 pb-20 px-6 sm:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center w-full max-w-7xl mx-auto relative z-10"
       >
         {educations.map((education, index) => (
           <FeedbackCard key={education.name} index={index} {...education} />
@@ -245,7 +245,7 @@ const Education = () => {
 
       {/* Connection Line */}
       <motion.div 
-        className="absolute left-1/2 top-1/3 bottom-1/3 w-0.5 bg-gradient-to-b from-[#915EFF] to-[#4CAF50] opacity-30"
+        className="absolute left-1/2 transform -translate-x-1/2 top-1/3 bottom-1/3 w-0.5 bg-gradient-to-b from-[#915EFF] to-[#4CAF50] opacity-20 hidden lg:block z-0"
         initial={{ scaleY: 0 }}
         animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
         transition={{ duration: 1.5, delay: 1 }}
