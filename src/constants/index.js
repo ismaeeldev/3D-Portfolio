@@ -34,7 +34,7 @@ const profiles = [
 
 const achievements = [
   {
-    title: "Earned Fiverr Level 1 Seller status, delivering premium full-stack and AI services globally with a perfect 5.0-star rating (2024-Present).",
+    title: "Earned Fiverr Level 2 Seller status, delivering premium full-stack and AI services globally with a perfect 5.0-star rating (2024-Present).",
   },
   {
     title: "Architected 'Costly,' an enterprise-grade Divorce SaaS platform featuring high-fidelity child support engines, Stripe integration, and custom OpenAI legal advisers (2024).",

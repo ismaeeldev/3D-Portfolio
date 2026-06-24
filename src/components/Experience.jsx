@@ -60,7 +60,7 @@ const ExperienceCard = ({ experience }) => {
             {experience.company_name === "Fiverr" && (
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-500/10 text-green-400 border border-green-500/20 shadow-[0_0_12px_rgba(76,175,80,0.15)] select-none">
                 <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
-                Level 1 Seller
+                Level 2 Seller
               </span>
             )}
           </div>

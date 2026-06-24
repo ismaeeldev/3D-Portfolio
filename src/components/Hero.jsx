@@ -24,7 +24,7 @@ const Hero = () => {
         'AI & Agentic Systems Engineer',
         'RAG System Specialist',
         'Next.js & TypeScript Expert',
-        'Fiverr Level 1 Seller',
+        'Fiverr Level 2 Seller',
         'Gov-Tech Solutions Developer'
       ]
     });
@@ -84,7 +84,7 @@ const Hero = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:scale-110 hover:text-[#1dbf73] hover:shadow-[0_0_15px_rgba(29,191,115,0.4)] transition-all duration-300 text-[1.2em]"
-                title="Fiverr Level 1 Seller"
+                title="Fiverr Level 2 Seller"
               >
                 <SiFiverr />
               </a>
